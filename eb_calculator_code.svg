@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Gradient Background -->
+  <rect width="760" height="480" rx="20" fill="url(#bgGrad)"/>
+  <rect width="760" height="480" rx="20" fill="url(#cardGrad)"/>
+
+  <!-- Code Window -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="35" width="680" height="410" rx="14" fill="#181825" stroke="#313244" stroke-width="1.5"/>
+
+    <!-- Title Bar -->
+    <rect x="40" y="35" width="680" height="44" rx="14" fill="#11111b"/>
+    <rect x="40" y="65" width="680" height="14" fill="#11111b"/>
+    <line x1="40" y1="79" x2="720" y2="79" stroke="#313244" stroke-width="1"/>
+
+    <!-- Window Controls -->
+    <circle cx="65" cy="57" r="6" fill="#f38ba8"/>
+    <circle cx="85" cy="57" r="6" fill="#f9e2af"/>
+    <circle cx="105" cy="57" r="6" fill="#a6e3a1"/>
+
+    <!-- Window Title -->
+    <text x="380" y="62" text-anchor="middle" fill="#9399b2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">ebCalculator / script.js</text>
+    <text x="690" y="62" text-anchor="end" fill="#585b70" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" font-weight="500">JavaScript</text>
+
+    <!-- Code Content -->
+    <g font-family="Consolas, 'Fira Code', 'Courier New', monospace" font-size="13.5" font-weight="500" letter-spacing="0.2">
+      <text x="65" y="115">
+        <tspan fill="#cba6f7">function</tspan> <tspan fill="#89b4fa">amount</tspan>() {
+      </text>
+
+      <text x="90" y="140">
+        <tspan fill="#cba6f7">var</tspan> <tspan fill="#cdd6f4">unit</tspan> = document.<tspan fill="#89b4fa">getElementById</tspan>(<tspan fill="#a6e3a1">"unit"</tspan>).value;
+      </text>
+
+      <text x="90" y="165">
+        <tspan fill="#cba6f7">var</tspan> <tspan fill="#cdd6f4">amt</tspan>;
+      </text>
+
+      <!-- Slab 1 -->
+      <text x="90" y="200">
+        <tspan fill="#6c7086">// ⚡ Progressive Tariff Slabs</tspan>
+      </text>
+
+      <text x="90" y="225">
+        <tspan fill="#cba6f7">if</tspan> (<tspan fill="#cdd6f4">unit</tspan> &lt;= <tspan fill="#fab387">200</tspan>) {
+      </text>
+      <text x="120" y="250">
+        <tspan fill="#cdd6f4">amt</tspan> = <tspan fill="#fab387">0</tspan>;  <tspan fill="#6c7086">// Free quota</tspan>
+      </text>
+
+      <!-- Slab 2 -->
+      <text x="90" y="275">
+        } <tspan fill="#cba6f7">else if</tspan> (<tspan fill="#cdd6f4">unit</tspan> &lt;= <tspan fill="#fab387">400</tspan>) {
+      </text>
+      <text x="120" y="300">
+        <tspan fill="#cdd6f4">amt</tspan> = (<tspan fill="#cdd6f4">unit</tspan> - <tspan fill="#fab387">200</tspan>) * <tspan fill="#fab387">4.7</tspan>;
+      </text>
+
+      <!-- Slab 3 -->
+      <text x="90" y="325">
+        } <tspan fill="#cba6f7">else if</tspan> (<tspan fill="#cdd6f4">unit</tspan> &lt;= <tspan fill="#fab387">500</tspan>) {
+      </text>
+      <text x="120" y="350">
+        <tspan fill="#cdd6f4">amt</tspan> = (<tspan fill="#cdd6f4">unit</tspan> - <tspan fill="#fab387">400</tspan>) * <tspan fill="#fab387">6.3</tspan> + <tspan fill="#fab387">200</tspan> * <tspan fill="#fab387">4.7</tspan>;
+      </text>
+
+      <!-- DOM Update -->
+      <text x="90" y="380">
+        } <tspan fill="#6c7086">/* ...higher slabs (₹8.40, ₹9.45, ₹10.50, ₹11.55) */</tspan>
+      </text>
+
+      <text x="90" y="405">
+        document.<tspan fill="#89b4fa">getElementById</tspan>(<tspan fill="#a6e3a1">"amount"</tspan>).innerText = <tspan fill="#a6e3a1">`Amount to pay: ₹${amt}`</tspan>;
+      </text>
+
+      <text x="65" y="430">
+        }
+      </text>
+    </g>
+  </g>
+</svg>
+
