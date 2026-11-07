@@ -1,5 +1,5 @@
 console.log("EB Calculator");
-
+/*
 function amount() {
   // var preU = document.getElementById("previousU").value;
   // var currU = document.getElementById("currentU").value;
@@ -51,4 +51,37 @@ function amount() {
 
   document.getElementById("amount").innerText =
     `The Amount you have to pay is:  ${amt}`;
+}
+*/
+function calculateEBBills(units) {
+  // Below 500 Units
+  if (units <= 200) return 0;
+  if (units <= 400) return (units - 200) * 4.7;
+  if (units <= 500) return 940 + (units - 400) * 6.3;
+
+  // Above 500 Units
+  if (units <= 600) return 2040 + (units - 500) * 8.4;
+  if (units <= 800) return 2880 + (units - 600) * 9.45;
+  if (units <= 1000) return 4770 + (units - 800) * 10.5;
+
+  return 6870 + (units - 1000) * 11.55;
+}
+
+function amount() {
+  const unitInput = document.getElementById("unit").value;
+  const units = Number(unitInput);
+
+  if (isNaN(units) || units < 0 || unitInput.trim() === "") {
+    alert("Please enter a valid number of units.");
+    return;
+  }
+
+  const totalAmount = calculateEBBills(units);
+
+  const formattedAmt = totalAmount.toFixed(2);
+
+  document.getElementById("units").innerText =
+    `Your Consumed Units for Bi-monthly is: ${units}`;
+  document.getElementById("amount").innerText =
+    `The Amount you have to pay is: ₹${formattedAmt}`;
 }
