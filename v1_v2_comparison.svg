@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 600" width="100%" height="100%">
+  <defs>
+    <filter id="vShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <linearGradient id="vBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1020" height="600" rx="20" fill="url(#vBg)"/>
+
+  <!-- Top Banner -->
+  <g transform="translate(40, 30)">
+    <rect width="135" height="26" rx="13" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-opacity="0.3"/>
+    <text x="67" y="17" text-anchor="middle" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">DEV JOURNEY</text>
+    <text x="150" y="20" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Evolution: Version 1 vs Version 2 🚀</text>
+  </g>
+
+  <!-- Left Column: Version 1 -->
+  <g transform="translate(40, 75)" filter="url(#vShadow)">
+    <rect width="455" height="485" rx="14" fill="#181825" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.5"/>
+
+    <!-- Window Bar -->
+    <rect width="455" height="42" rx="14" fill="#11111b"/>
+    <rect y="30" width="455" height="12" fill="#11111b"/>
+    <line x1="0" y1="42" x2="455" y2="42" stroke="#313244" stroke-width="1"/>
+
+    <circle cx="25" cy="21" r="5" fill="#f43f5e"/>
+    <circle cx="42" cy="21" r="5" fill="#fbbf24"/>
+    <circle cx="59" cy="21" r="5" fill="#4ade80"/>
+
+    <rect x="330" y="10" width="105" height="22" rx="6" fill="#6366f1" fill-opacity="0.15"/>
+    <text x="382" y="25" text-anchor="middle" fill="#a5b4fc" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">📦 VERSION 1</text>
+
+    <!-- Code Block -->
+    <g font-family="Consolas, 'Fira Code', monospace" font-size="12" font-weight="500" fill="#ffffff">
+      <text x="25" y="70" fill="#94a3b8">// Single input mark check</text>
+      <text x="25" y="95"><tspan fill="#cba6f7">function</tspan> <tspan fill="#38bdf8">result</tspan>() {</text>
+      <text x="45" y="120"><tspan fill="#cba6f7">var</tspan> submark = <tspan fill="#38bdf8">parseInt</tspan>(</text>
+      <text x="65" y="142">document.<tspan fill="#38bdf8">getElementById</tspan>(<tspan fill="#a6e3a1">"sub"</tspan>).value);</text>
+      
+      <text x="45" y="175"><tspan fill="#cba6f7">if</tspan> (<tspan fill="#38bdf8">isNaN</tspan>(submark)) {</text>
+      <text x="65" y="198"><tspan fill="#38bdf8">alert</tspan>(<tspan fill="#a6e3a1">"Enter a Number"</tspan>);</text>
+      <text x="45" y="221">} <tspan fill="#cba6f7">else if</tspan> (submark &lt; <tspan fill="#fab387">0</tspan> || submark &gt; <tspan fill="#fab387">100</tspan>) {</text>
+      <text x="65" y="244"><tspan fill="#38bdf8">alert</tspan>(<tspan fill="#a6e3a1">"Enter valid 0-100"</tspan>);</text>
+      <text x="45" y="267">} <tspan fill="#cba6f7">else if</tspan> (submark &lt; <tspan fill="#fab387">35</tspan>) {</text>
+      <text x="65" y="290">document.<tspan fill="#38bdf8">getElementById</tspan>(<tspan fill="#a6e3a1">"res"</tspan>).value = <tspan fill="#a6e3a1">"Fail"</tspan>;</text>
+      <text x="45" y="313">} <tspan fill="#cba6f7">else</tspan> {</text>
+      <text x="65" y="336">document.<tspan fill="#38bdf8">getElementById</tspan>(<tspan fill="#a6e3a1">"res"</tspan>).value = <tspan fill="#a6e3a1">"Pass"</tspan>;</text>
+      <text x="45" y="359">}</text>
+      <text x="25" y="382">}</text>
+
+      <text x="25" y="420" fill="#818cf8">// 🔹 Single input only</text>
+      <text x="25" y="445" fill="#e2e8f0">// 🔹 Writes output into text box</text>
+      <text x="25" y="470" fill="#e2e8f0">// 🔹 Basic Pass/Fail threshold</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Version 2 -->
+  <g transform="translate(525, 75)" filter="url(#vShadow)">
+    <rect width="455" height="485" rx="14" fill="#181825" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5"/>
+
+    <!-- Window Bar -->
+    <rect width="455" height="42" rx="14" fill="#11111b"/>
+    <rect y="30" width="455" height="12" fill="#11111b"/>
+    <line x1="0" y1="42" x2="455" y2="42" stroke="#313244" stroke-width="1"/>
+
+    <circle cx="25" cy="21" r="5" fill="#f43f5e"/>
+    <circle cx="42" cy="21" r="5" fill="#fbbf24"/>
+    <circle cx="59" cy="21" r="5" fill="#4ade80"/>
+
+    <rect x="330" y="10" width="105" height="22" rx="6" fill="#10b981" fill-opacity="0.15"/>
+    <text x="382" y="25" text-anchor="middle" fill="#34d399" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">🚀 VERSION 2</text>
+
+    <!-- Code Block -->
+    <g font-family="Consolas, 'Fira Code', monospace" font-size="12" font-weight="500" fill="#ffffff">
+      <text x="25" y="70" fill="#94a3b8">// 5-Subject Marksheet Engine</text>
+      <text x="25" y="95"><tspan fill="#cba6f7">function</tspan> <tspan fill="#38bdf8">calculateTotalMark</tspan>() {</text>
+      <text x="45" y="120"><tspan fill="#cba6f7">const</tspan> tamil = <tspan fill="#38bdf8">parseInt</tspan>(getVal(<tspan fill="#a6e3a1">"tamil"</tspan>));</text>
+      <text x="45" y="142"><tspan fill="#cba6f7">const</tspan> english = <tspan fill="#38bdf8">parseInt</tspan>(getVal(<tspan fill="#a6e3a1">"english"</tspan>));</text>
+      <text x="45" y="164"><tspan fill="#cba6f7">const</tspan> maths = <tspan fill="#38bdf8">parseInt</tspan>(getVal(<tspan fill="#a6e3a1">"maths"</tspan>));</text>
+      <text x="45" y="186"><tspan fill="#6c7086">/* + science, social */</tspan></text>
+      
+      <text x="45" y="215"><tspan fill="#6c7086">// Multi-condition validation</tspan></text>
+      <text x="45" y="238"><tspan fill="#cba6f7">if</tspan> (<tspan fill="#38bdf8">isNaN</tspan>(tamil) || <tspan fill="#38bdf8">isNaN</tspan>(english) /*...*/) {</text>
+      <text x="65" y="260"><tspan fill="#38bdf8">alert</tspan>(<tspan fill="#a6e3a1">"Enter a Number"</tspan>);</text>
+      <text x="45" y="283">} <tspan fill="#cba6f7">else</tspan> {</text>
+      <text x="65" y="306"><tspan fill="#cba6f7">const</tspan> total = tamil + english + maths + ...;</text>
+      <text x="65" y="329"><tspan fill="#cba6f7">const</tspan> average = total / <tspan fill="#fab387">5</tspan>;</text>
+      <text x="65" y="352">showRes.innerHTML =</text>
+      <text x="85" y="374"><tspan fill="#a6e3a1">`Total: ${total} | %: ${average}%`</tspan>;</text>
+      <text x="45" y="396">}</text>
+      <text x="25" y="418">}</text>
+
+      <text x="25" y="445" fill="#34d399">// ✨ Full 5-subject coordinator</text>
+      <text x="25" y="470" fill="#e2e8f0">// ✨ Computes Total &amp; Percentage</text>
+      <text x="25" y="495" fill="#e2e8f0">// ✨ Dynamic DOM heading output (H1)</text>
+    </g>
+  </g>
+</svg>
+

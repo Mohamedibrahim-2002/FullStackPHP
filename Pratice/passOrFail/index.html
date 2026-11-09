@@ -4,16 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marksheet</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <h2 class="subject">Total and Percentage Calculator</h2>
+
     <form action="">
-      <label for="sub">Subject Mark:</label>
-      <input type="text" id="sub" />
-      <label for="res">Result:</label>
-      <input type="text" id="res" />
-      <input type="button" value="Check" onclick="result()" />
+      <label for="tamil">Tamil Mark : <input type="text" id="tamil" /></label>
+
+      <label for="english"
+        >English Mark : <input type="text" id="english"
+      /></label>
+
+      <label for="maths">Maths Mark :<input type="text" id="maths" /></label>
+
+      <label for="science"
+        >Science Mark :<input type="text" id="science"
+      /></label>
+
+      <label for="social">Social Mark :<input type="text" id="social" /></label>
+
+      <!-- <label for="res">Result:</label>
+      <input type="text" id="res" /> -->
+      <br />
+      <input type="button" value="Check" onclick="calculateTotalMark()" />
     </form>
+    <h1 id="showResult"></h1>
   </body>
 </html>
