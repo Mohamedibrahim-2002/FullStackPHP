@@ -2,16 +2,15 @@ console.log("Connected");
 
 function calcSalary() {
   const salary = parseInt(document.getElementById("Salary").value);
-  console.log(salary);
-
-  document.getElementById("disBasicPay").innerText =
-    `You Basic Salary is ₹ ${salary}`;
-
+  // console.log(salary);
   // alert("Welcome");
 
   if (isNaN(salary)) {
     alert("Enter valid amount");
+    return;
   }
+  document.getElementById("disBasicPay").innerText =
+    `You Basic Salary is ₹ ${salary}`;
   const da = 63 / 100;
   const hra = 27 / 100;
   const pf = 12 / 100;
