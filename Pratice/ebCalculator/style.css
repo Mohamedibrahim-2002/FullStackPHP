@@ -3,6 +3,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  text-align: center;
   /* align-items: center; */
 }
 form {
@@ -15,4 +16,11 @@ form {
 #unit {
   border-radius: 5px;
   margin-left: 20px;
+}
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+div h1 {
+  margin-top: 50px;
 }
