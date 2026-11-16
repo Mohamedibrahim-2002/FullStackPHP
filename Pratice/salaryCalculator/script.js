@@ -5,7 +5,7 @@ function calcSalary() {
   console.log(salary);
 
   document.getElementById("disBasicPay").innerText =
-    `You Basic Salary is ${salary}`;
+    `You Basic Salary is ₹ ${salary}`;
 
   // alert("Welcome");
 
@@ -22,16 +22,16 @@ function calcSalary() {
   let esiVal = salary * esi;
   console.log(daVal, hraVal, pfVal, esiVal);
 
-  document.getElementById("disDA").innerText = `${parseInt(daVal)}`;
-  document.getElementById("disHRA").innerText = `${parseInt(hraVal)}`;
-  document.getElementById("disPF").innerText = `${parseInt(pfVal)}`;
-  document.getElementById("disESI").innerText = `${parseInt(esiVal)}`;
+  document.getElementById("allowanceTotal").innerText = `₹ ${daVal + hraVal}`;
+  document.getElementById("deductionTotal").innerText = `₹ ${pfVal + esiVal}`;
+  document.getElementById("disDA").innerText = `₹ ${parseInt(daVal)}`;
+  document.getElementById("disHRA").innerText = `₹ ${parseInt(hraVal)}`;
+  document.getElementById("disPF").innerText = `₹ ${parseInt(pfVal)}`;
+  document.getElementById("disESI").innerText = `₹ ${parseInt(esiVal)}`;
 
-  const disGrossPay = salary + daVal + hraVal + pfVal + esiVal;
-  const disNetPay = salary + daVal + hraVal - (pfVal + esiVal);
+  const disGrossPay = salary + daVal + hraVal;
+  const disNetPay = disGrossPay - (pfVal + esiVal);
 
-  document.getElementById("disGrosspay").innerText =
-    `Your Gross Pay is ${disGrossPay}`;
-  document.getElementById("disNetpay").innerText =
-    `Your Net pay or In-Hand Pay is ${disNetPay}`;
+  document.getElementById("disGrosspay").innerText = `₹ ${disGrossPay}`;
+  document.getElementById("disNetpay").innerText = `₹ ${disNetPay}`;
 }

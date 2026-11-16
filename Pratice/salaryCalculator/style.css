@@ -9,6 +9,10 @@ table {
   border: 1px solid black;
   width: 550px;
   text-align: center;
+  background-color: #fff;
+}
+th {
+  background-color: #add8e6;
 }
 td,
 th {
