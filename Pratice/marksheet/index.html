@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marksheet</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h3>MarkSheet</h3>
+      <form class="formcontent">
+        <label for="regno">
+          Register No <input type="number" name="regno" id="regno" />
+        </label>
+        <h4>Enter your Marks</h4>
+        <label for="tamil">
+          Tamil <input type="number" name="tamil markbox" id="tamil" />
+        </label>
+        <label for="english">
+          English <input type="number" name="english markbox" id="english" />
+        </label>
+        <label for="maths">
+          Maths <input type="number" name="maths markbox" id="maths" />
+        </label>
+        <label for="science">
+          Science <input type="number" name="science markbox" id="science" />
+        </label>
+        <label for="social">
+          Social <input type="number" name="tamil markbox" id="social" />
+        </label>
+        <input
+          type="button"
+          value="Calculate"
+          class="calcMark"
+          onclick="calcResult()"
+        />
+      </form>
+      <table>
+        <tr>
+          <td>Total</td>
+          <td id="total"></td>
+        </tr>
+        <tr>
+          <td>Percentage</td>
+          <td id="percentage"></td>
+        </tr>
+        <tr>
+          <td>Result</td>
+          <td id="result"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

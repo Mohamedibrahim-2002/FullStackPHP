@@ -1,0 +1,41 @@
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.formcontent {
+  display: flex;
+  flex-direction: column;
+}
+.calcMark {
+  margin-top: 30px;
+  max-width: 200px;
+}
+label {
+  max-width: 350px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  margin-left: 30px;
+  text-align: center;
+}
+table tr td {
+  border: 1px solid black;
+  width: 300px;
+  text-align: center;
+}
+table {
+  width: 350px;
+  margin-top: 50px;
+}
+h4,
+h3 {
+  margin: 20px;
+}
