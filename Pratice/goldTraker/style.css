@@ -1,0 +1,51 @@
+body {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#rateData,
+tr,
+th,
+td {
+  border: 1px solid black;
+}
+#rateData {
+  width: 600px;
+  text-align: center;
+}
+
+#todayRate td {
+  border: 1px solid aqua;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+#todayRate {
+  margin-top: 50px;
+  border: 1px solid black;
+  /* border-collapse: collapse; */
+  width: 500px;
+  border-spacing: 30px;
+}
+#todayRate {
+  border: 2px solid #222;
+  border-collapse: separate; /* Required so border-spacing works */
+  border-spacing: 12px; /* 1. CELL SPACING: Gap outside between cells */
+  background-color: #f4f4f4;
+}
+
+#todayRate th,
+td {
+  border: 1px solid #555;
+  padding: 15px; /* 2. CELL PADDING: Space inside each cell */
+  background-color: #ffffff;
+  text-align: left;
+}
+
+#todayRate th {
+  background-color: #ffe082;
+}
